@@ -1,0 +1,28 @@
+﻿@using ChallengesApp.Models
+@model IEnumerable<Game>
+@{
+    ViewBag.Title = "Index";
+}
+<div class="col-md-12">
+    <a class="btn btn-info" style="align-content:center" href="https://itunes.apple.com/us/genre/ios-games/id6014?mt=8&letter=A&page=1#page">Referans Sayfa İçin Tıklayınız.</a>
+    <br />
+
+</div>
+@foreach (var game in Model)
+{
+    <div class="col-md-4">
+        <div class="card" style="width:100%;">
+            <img src="@game.ImgUrl" class="card-img-top" alt="Game Image">
+            <div class="card-body">
+                <h5 class="card-title">@game.Name</h5>
+                <a href="@game.Url" class="btn btn-primary">Ayrıntı İçin Tıklayınız.</a>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <hr />
+    </div>
+}
