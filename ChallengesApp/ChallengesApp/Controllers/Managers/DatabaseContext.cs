@@ -25,6 +25,7 @@ namespace ChallengeApp.Controllers.Managers
     }
 
     //Proje ilk çalıştığında oluşturulacak veritabanı için ayarlamaları burada yapıyoruz. İlgili linkteki içerikleri çekmeyi initializerde değilde sayfa get olurken de yapabilirdik.  
+    //Bu sayede ekstaradan bir sql dosyası ile uğraşmayıp Projeyi Çalıştıracak arkadaşlar sadece web.config dosyasında connectionString i kendilerine uyarlayıp çalıştıracaklar. 
     public class VeritabaniOlusturucu : CreateDatabaseIfNotExists<DatabaseContext>
     {
         List<string> liste = new List<string>();
